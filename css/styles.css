@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Rajdhani-SemiBold";
+  background-color: #282928;
+  color: #FFFFFF; }
+
+@font-face {
+  font-family: "Rajdhani-SemiBold";
+  src: url(../assets/fonts/Rajdhani-SemiBold.ttf); }
+
+.contenedor {
+  margin: auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 3fr auto;
+  grid-template-areas: "header" "main" "footer";
+  /* gap: 10px; */ }
+
+header {
+  grid-area: header;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 10px; }
+  header .navbar {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+    header .navbar .ul-nav {
+      list-style: none;
+      padding: 10px;
+      display: flex;
+      align-items: left; }
+    header .navbar .li-nav {
+      padding: 10px; }
+    header .navbar #li-nav:hover {
+      background-color: #EFF612;
+      color: #282928;
+      border-radius: 30px; }
+    header .navbar a {
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 1rem;
+      font-size: 0.8rem; }
+      header .navbar a:hover {
+        color: #EFF612; }
+  header .logo {
+    padding: 5px; }
+    header .logo img {
+      width: 50px;
+      margin: auto;
+      overflow: hidden; }
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  .main h1 {
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    text-align: center; }
+  .main h4, .main h3 {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-align: center; }
+  .main p {
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-align: justify; }
+  .main span {
+    color: #EFF612; }
+  .main img {
+    margin: auto;
+    width: 50%; }
+
+.containerImg {
+  display: flex;
+  position: relative; }
+
+.cardMain {
+  background-color: #FFFFFF;
+  margin: auto;
+  width: 90%;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  border-radius: 30px; }
+  .cardMain p {
+    color: #282928;
+    text-align: center;
+    padding: 1.5rem; }
+
+.cardColor {
+  margin: auto;
+  background-color: #EFF612;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 0; }
+  .cardColor p {
+    text-align: center;
+    color: #282928;
+    font-size: 0.8rem; }
+
+.subCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  text-align: center; }
+  .subCard img {
+    border-radius: 10px;
+    width: 180px;
+    margin: auto; }
+  .subCard p {
+    text-align: center;
+    font-size: 0.8rem; }
+
+.footer {
+  grid-area: footer;
+  background-color: #EFF612;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center; }
+  .footer img {
+    margin: auto;
+    width: 10%; }
+  .footer p {
+    color: #282928;
+    text-align: center;
+    font-size: 0.8rem; }
+
+/* Mobile First */
+@media screen and (min-width: 768px) {
+  nav {
+    align-items: left; }
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas: "header" "main" "footer";
+    /* gap: 10px; */ }
+  .cardMain {
+    display: flex;
+    flex-direction: row; } }
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  nav {
+    align-items: left; }
+  nav .ul-nav .li-nav a {
+    font-size: 1.5rem; }
+  nav .logo img {
+    width: 200px; }
+  .main h4 {
+    font-size: 1.5rem; }
+  .main h3 {
+    font-size: 1.5rem; }
+  .main h1 {
+    font-size: 2.5rem; }
+  .main p {
+    font-size: 1.5rem; }
+  .cardColor p {
+    font-size: 1.5rem; }
+  .subCard p {
+    font-size: 1.5rem; }
+  .footer .redes p {
+    font-size: 1.5rem; }
+  .contenedor {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas: "header header" "main main" "footer footer";
+    /* gap: 10px; */ } }

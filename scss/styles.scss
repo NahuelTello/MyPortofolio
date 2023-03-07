@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+$MainColor: #282928;
+$SecondaryColor: #EFF612;
+$color-blanco: #FFFFFF;
+$other-color: #CCCCCC ;
+body{
+    font-family: "Rajdhani-SemiBold";
+    background-color:$MainColor ;
+    color:$color-blanco;
+}
+
+@font-face {
+    font-family: "Rajdhani-SemiBold" ;
+    src: url(../assets/fonts/Rajdhani-SemiBold.ttf );
+}
+
+.contenedor{
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer"
+    ;
+        /* gap: 10px; */
+}
+header{
+    grid-area: header;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    .navbar{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .ul-nav {
+                list-style: none;
+                padding: 10px;
+                display: flex;
+                align-items: left;
+            }
+        .li-nav{
+            padding: 10px;
+        }
+        #li-nav{
+            &:hover{
+                background-color: $SecondaryColor;
+                color: $MainColor;
+                border-radius: 30px;
+            }
+        }
+        a {
+            color: $color-blanco;
+            text-decoration: none;
+            padding: 1rem;
+            font-size: 0.8rem;
+            &:hover {
+                color: $SecondaryColor;
+            }
+        }
+    }
+    .logo{
+        padding: 5px;
+        img {
+            width: 50px;
+            margin: auto;
+            overflow: hidden;
+        }
+    }
+}
+
+.main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1{
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    h4,h3{
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        text-align: center;
+        
+    }
+    p{
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        text-align:justify;
+    }
+    span{
+        color: $SecondaryColor;
+    }
+    img{
+        margin: auto;
+        width: 50%;
+    }
+    
+}
+.containerImg {
+    display: flex;
+    position: relative;
+}
+.cardMain {
+    background-color: $color-blanco;
+    margin: auto;
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-items: center;
+    border-radius: 30px;
+        p {
+            color: $MainColor;
+            text-align: center;
+            padding: 1.5rem;
+        }
+    
+}
+.cardColor {
+    margin: auto;
+    background-color: $SecondaryColor;
+    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index:0;
+    p {
+        text-align: center;
+        color: $MainColor;
+        font-size: 0.8rem;
+    }
+}
+.subCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    
+    img {
+        border-radius: 10px;
+        width: 180px;
+        margin: auto;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
+.footer{
+    grid-area: footer;
+    background-color: $SecondaryColor;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    img{
+        margin: auto;
+        width: 10%;
+    }
+    p{
+        color: $MainColor;
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+/* Mobile First */
+@media screen and (min-width: 768px){
+    nav{
+        align-items: left;
+    }
+    
+    .contenedor {
+        display: grid;
+        grid-template-columns:1fr;
+        grid-template-rows: auto 3fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer"
+        ;
+        /* gap: 10px; */
+    }
+    .cardMain{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px){
+    nav {
+            align-items: left;
+        }
+    nav .ul-nav .li-nav a {
+            font-size: 1.5rem;
+        }
+    nav .logo img {
+        width: 200px;
+    }
+    .main h4{
+        font-size: 1.5rem;
+    }
+    .main h3{
+        font-size: 1.5rem;
+    }
+    .main h1{
+        font-size: 2.5rem;
+    }
+    .main p{
+        font-size: 1.5rem;
+    }
+    .cardColor p{
+        font-size: 1.5rem;
+    }
+    .subCard p {
+        font-size: 1.5rem;
+    }
+    .footer .redes p{
+        font-size: 1.5rem;
+    }
+        .contenedor {
+            margin: auto;
+            display: grid;
+            grid-template-columns:2fr 1fr;
+            grid-template-rows: auto 3fr auto;
+            grid-template-areas:
+                "header header"
+                "main main"
+                "footer footer"
+            ;
+            /* gap: 10px; */
+        }
+}
+    
