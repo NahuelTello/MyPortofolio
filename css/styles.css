@@ -137,7 +137,7 @@ header {
   text-align: center; }
   .footer img {
     margin: auto;
-    width: 10%; }
+    width: 50px; }
   .footer p {
     color: #282928;
     text-align: center;
@@ -179,6 +179,8 @@ header {
     font-size: 1.5rem; }
   .footer .redes p {
     font-size: 1.5rem; }
+  .footer img {
+    width: 100px; }
   .contenedor {
     margin: auto;
     display: grid;
