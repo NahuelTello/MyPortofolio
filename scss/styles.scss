@@ -163,6 +163,52 @@ header{
     }
 }
 
+.imgContact{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    .form-group {
+            margin-bottom: 20px;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+    
+        input,
+        textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+    
+        button[type="submit"] {
+            background-color: $SecondaryColor;
+            color: $MainColor;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+    
+        button[type="submit"]:hover {
+            color: $MainColor;
+        }
+}
+
 .footer{
     grid-area: footer;
     background-color: $SecondaryColor;
@@ -233,6 +279,25 @@ header{
     .subCard p {
         font-size: 1.5rem;
     }
+/*     .form{
+        width: 50%;
+    }
+    .form input[type="text"]{
+        width: 50%;
+        font-size: 1.5rem;
+    }
+    .form input[type="email"] {
+        width: 50%;
+        font-size: 1.5rem;
+    }
+    .form textarea{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    .form input[type="sumbit"]{
+        width: 20%;
+        font-size: 1.5rem;
+    } */
     .footer .redes p{
         font-size: 1.5rem;
     }
