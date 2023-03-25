@@ -38,10 +38,19 @@ header {
       align-items: left; }
     header .navbar .li-nav {
       padding: 10px; }
-    header .navbar #li-nav:hover {
-      background-color: #EFF612;
-      color: #282928;
-      border-radius: 30px; }
+    header .navbar #li-nav {
+      color: #FFFFFF;
+      border-radius: 2rem;
+      border: 0.3rem solid #FFFFFF;
+      box-shadow: 0 3px 0 0 #FFFFFF;
+      position: relative;
+      overflow: hidden; }
+      header .navbar #li-nav:hover {
+        color: #EFF612;
+        border: 0.3rem solid #EFF612;
+        box-shadow: 0 3px 0 0 #EFF612;
+        top: 3px;
+        box-shadow: none; }
     header .navbar a {
       color: #FFFFFF;
       text-decoration: none;
@@ -165,11 +174,9 @@ form {
 .footer {
   grid-area: footer;
   background-color: #EFF612;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center; }
+  text-align: center;
+  display: block;
+  flex-direction: column; }
   .footer img {
     margin: auto;
     width: 50px; }
@@ -177,6 +184,31 @@ form {
     color: #282928;
     text-align: center;
     font-size: 0.8rem; }
+  .footer label {
+    color: #282928;
+    font-family: "Rajdhani-SemiBold";
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 0.3rem solid #282928;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 3px 0 0 #282928; }
+    .footer label:hover {
+      top: 3px;
+      box-shadow: none; }
+
+.redes {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
 
 /* Mobile First */
 @media screen and (min-width: 768px) {
@@ -235,6 +267,14 @@ form {
     font-size: 1.5rem; }
   .footer img {
     width: 100px; }
+  .footer label {
+    outline: none;
+    color: #282928;
+    font-family: "Rajdhani-SemiBold";
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    letter-spacing: 0.04rem; }
   .contenedor {
     margin: auto;
     display: grid;

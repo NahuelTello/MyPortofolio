@@ -51,10 +51,18 @@ header{
             padding: 10px;
         }
         #li-nav{
-            &:hover{
-                background-color: $SecondaryColor;
-                color: $MainColor;
-                border-radius: 30px;
+            color: $color-blanco;  
+            border-radius: 2rem;
+            border: 0.3rem solid $color-blanco;
+            box-shadow: 0 3px 0 0 $color-blanco;
+            position: relative;
+            overflow: hidden;
+            &:hover {
+                color: $SecondaryColor;
+                border: 0.3rem solid $SecondaryColor;
+                box-shadow: 0 3px 0 0 $SecondaryColor;
+                top: 3px;
+                box-shadow: none;
             }
         }
         a {
@@ -65,6 +73,7 @@ header{
             &:hover {
                 color: $SecondaryColor;
             }
+            
         }
     }
     .logo{
@@ -212,11 +221,10 @@ form {
 .footer{
     grid-area: footer;
     background-color: $SecondaryColor;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
     text-align: center;
+    display: block;
+    flex-direction: column;
+    
     img{
         margin: auto;
         width: 50px;
@@ -226,6 +234,36 @@ form {
         text-align: center;
         font-size: 0.8rem;
     }
+        label {
+            
+            color: $MainColor;
+            font-family: "Rajdhani-SemiBold";
+
+            width: 25px;
+            height: 25px;
+            font-size: 1rem;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+            border: 0.3rem solid $MainColor;
+            background: $color-blanco;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 3px 0 0 $MainColor;
+            &:hover {
+                top: 3px;
+                box-shadow: none;
+            }
+        }
+    
+}
+.redes{
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 /* Mobile First */
 @media screen and (min-width: 768px){
@@ -303,6 +341,15 @@ form {
     }
     .footer img{
         width: 100px;
+    }
+    .footer label {
+        outline: none;
+        color: $MainColor;
+        font-family: "Rajdhani-SemiBold";
+        width: 50px;
+        height: 50px;
+        font-size: 2rem;
+        letter-spacing: 0.04rem;
     }
         .contenedor {
             margin: auto;
